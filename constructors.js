@@ -15,7 +15,10 @@
 
 // Code here
 
-
+function CarFactory(make, model){
+  this.make = make,
+  this.model= model
+}
 
 ////////// PROBLEM 2 //////////
 
@@ -33,10 +36,10 @@ function Employee(name, email, hireDate) {
 */
 
 // Code here
+let bob= new Employee ('Bob', 'bob@gmail.com', '01-02-98')
 
 
-
-////////// PROBLEM 4 //////////
+////////// PROBLEM 3 //////////
 
 // Do not edit the code below.
 var prius = new Car('Toyota', 'Prius', 2011);
@@ -55,4 +58,10 @@ mustang.moveCar(); // Increments mustang' move property by 10. Returns the new m
 
 // Code here
 
-
+function Car (make, model, year){
+  this.make= make,
+  this.model= model,
+  this.year= year,
+  this.move= 0
+  this.moveCar= function(){return this.move+=10}
+}
